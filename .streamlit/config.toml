@@ -1,0 +1,23 @@
+[theme]
+baseRadius = "0.75rem"
+headingFont = "'Palatino Linotype', 'Iowan Old Style', Georgia, serif"
+
+[theme.light]
+primaryColor = "#0f766e"
+backgroundColor = "#fbfaf7"
+secondaryBackgroundColor = "#f1eee7"
+textColor = "#1f2421"
+borderColor = "#ddd8cc"
+
+[theme.dark]
+primaryColor = "#2dd4bf"
+backgroundColor = "#101513"
+secondaryBackgroundColor = "#1a211e"
+textColor = "#e7ece9"
+borderColor = "#2c3632"
+
+[server]
+maxUploadSize = 20
+
+[browser]
+gatherUsageStats = false

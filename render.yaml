@@ -1,0 +1,16 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: lenslore
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    healthCheckPath: /_stcore/health
+    envVars:
+      # Hides Ollama, which only works on the computer it is installed on.
+      - key: LENSLORE_HOSTED
+        value: "true"
+      # Not stored in the repository: Render asks for the value when the service is created.
+      - key: GEMINI_API_KEY
+        sync: false
